@@ -1,20 +1,20 @@
-### Android Sender not receiving CastStateListener event after updating to `cast-framework` version`22.0.0`
+### Android Sender not receiving CastStateListener event after updating to `cast-framework` version `22.0.0`
 
 After updating to the latest `cast-framework` version `22.0.0`, the CastStateListener is not
 triggered initially even though Cast devices are available on the network.
-Most of the time the CastStateListener is triggered after a few minutes, as seen in the following log:
+Most of the time the CastStateListener is triggered after more than a minute, as seen in the following log:
 
 ```
-11:02:26.905  D  Cast state: 1
-11:03:53.420  D  Cast state changed: 2
+11:24:00.541  D  Cast state: NO_DEVICES_AVAILABLE
+11:25:38.143  D  Cast state changed: NOT_CONNECTED
 ```
 
 Using the previous `cast-framework` version `21.4.0`, we can see that the CastStateListener is
 triggered almost immediately after the app is launched.
 
 ```
-11:07:51.762  D  Cast state: 1
-11:07:51.938  D  Cast state changed: 2
+11:27:58.329  D  Cast state: NO_DEVICES_AVAILABLE
+11:27:58.453  D  Cast state changed: NOT_CONNECTED
 ```
 
 ### Steps to reproduce
