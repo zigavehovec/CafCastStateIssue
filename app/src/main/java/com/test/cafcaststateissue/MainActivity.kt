@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         val castContext = CastContext.getSharedInstance(this)
 
+        Log.d("MainActivity", "Cast state: ${castContext.castState}")
         castContext.addCastStateListener {
             Log.d("MainActivity", "Cast state changed: $it")
             Toast.makeText(this, "Cast state changed: $it", Toast.LENGTH_SHORT).show()
